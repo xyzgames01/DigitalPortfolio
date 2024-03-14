@@ -375,6 +375,10 @@ html {
     align-items: center;
   }
 
+  .itgrad {
+    font-size: 25px;
+  }
+
   #hero .social-links {
     /* Adding span here to ensure they pick up the text-align property */
     display: flex;
