@@ -477,10 +477,23 @@ html {
 
 @media (max-width: 506px){
   .bottom-right-image img {
-    margin-bottom: -30vh;
+    margin-bottom: -35vh;
   }
 }
 
+@media (max-height: 687px){
+  @media (max-width: 375px){
+    .bottom-right-image img {
+      margin-bottom: -40vh;
+    }
+  }
+}
+
+@media (max-width: 264px){
+  .bottom-right-image img {
+    margin-bottom: -40vh;
+  }
+}
 
 
 @keyframes softwareDev {
