@@ -227,6 +227,10 @@ html {
   --------------------------------------------------------------*/
 
 #hero {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 10vw;
   background-color: #f7f7f7;
   /* Light grey background */
   background-image: radial-gradient(circle, #000 1px, transparent 1px);
@@ -238,6 +242,7 @@ html {
   background-position: center;
   position: fixed;
   /* This keeps the hero fixed during scrolling */
+  
   top: 0;
   left: 0;
   z-index: -1;
@@ -254,7 +259,8 @@ html {
 }
 
 .bottom-right-image img {
-  display: block;
+  display: flex;
+  flex-direction: row;
   /* Removes bottom margin/whitespace inherent to inline elements like img */
   max-width: 100%;
   /* Ensures the image is responsive and doesn't overflow its container */
@@ -263,19 +269,16 @@ html {
   filter: drop-shadow(8px 8px 10px gray);
 }
 
+#hero h1, #hero h2, #hero h3 {
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
 #hero h1 {
   font-size: 60px;
-  text-align: left;
 }
 
 #hero h1 span {
   color: #007bff;
-  text-align: left;
-}
-
-#hero h1, #hero h2, #hero h3 {
-  filter: drop-shadow(8px 8px 10px gray);
-
 }
 
 #hero .social-links a {
@@ -344,19 +347,103 @@ html {
   animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
+@media (max-width: 1350px) {
+
+  #hero
+
+  #hero h1 span {
+    display: block;
+  }
+
+  #hero h1 {
+    font-size: 60px;
+    text-align: left;
+  }
+
+  #hero h1 span {
+    color: #007bff;
+    text-align: left;
+  }
+
+  #hero h2 {
+    text-align: left;
+  }
+
+  #hero h3 {
+    /* Adding span here to ensure they pick up the text-align property */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .itgrad {
+    font-size: 25px;
+  }
+
+  #hero .social-links {
+    /* Adding span here to ensure they pick up the text-align property */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+}
+
+
 @media (max-width: 991px) {
   #hero {
     height: 100vh;
+    align-items: center;
+    justify-content: left;
   }
+
+  #hero h1, #hero h2 {
+    text-align: left;
+  }
+
+
+  #hero h3 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+
 }
 
-@media only screen and (max-width: 1249px) {
+
+@media (max-width: 870px){
+
+  #hero {
+    width: 100%;
+    padding: 0;
+    height: 100vh;
+    padding-top: 8vh;
+    align-items: start;
+    justify-content: center;
+  }
+
   .bottom-right-image {
-    display: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
   }
 
   .bottom-right-image img {
-    display: none;
+    margin-bottom: -20vh;
+  }
+
+  #hero .social-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #hero #hero_content {
+    align-items: start;
+    justify-content: center;
+    margin-left: -8vh;
   }
 
   #hero h1 {
@@ -374,24 +461,27 @@ html {
   }
 
   #hero h3 {
-    /* Adding span here to ensure they pick up the text-align property */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Allow titles to wrap if necessary */
+    justify-content: center; /* Center titles horizontally */
+    text-align: center;
   }
 
-  .itgrad {
-    font-size: 25px;
-  }
-
-  #hero .social-links {
-    /* Adding span here to ensure they pick up the text-align property */
+  #hero .social-links a {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
+
 
 }
+
+@media (max-width: 506px){
+  .bottom-right-image img {
+    margin-bottom: -30vh;
+  }
+}
+
+
 
 @keyframes softwareDev {
   0% {
