@@ -49,7 +49,7 @@
     let offset = 100;
     let position = window.scrollY + offset;
     let heroSection = select("#hero");
-    let navbarlinks = select("#navbar .scrollto", true); // Assuming this is your navbar links selector
+    let navbarlinks = select("#navbar .scrollto", true); 
 
     // Initially remove active class from all links
     navbarlinks.forEach((link) => link.classList.remove("active"));

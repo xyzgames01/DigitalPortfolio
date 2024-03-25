@@ -411,7 +411,7 @@ html {
 }
 
 
-@media (max-width: 870px){
+@media (max-width: 769px){
 
   #hero {
     width: 100%;
@@ -432,6 +432,14 @@ html {
 
   .bottom-right-image img {
     margin-bottom: -20vh;
+  }
+
+  @media (max-height: 721px){
+    .bottom-right-image {
+      right: 0;
+      justify-content: right; /* Center items vertically */
+
+    }
   }
 
   #hero .social-links{
